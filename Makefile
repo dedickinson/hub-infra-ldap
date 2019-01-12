@@ -19,8 +19,8 @@ run: build
 		-v $(LDAP_DATA_VOLUME):/var/lib/ldap \
 		-v $(LDAP_SLAPD_VOLUME):/etc/ldap/slapd.d \
 		-p 389:389 \
-		-p 689:689 \
-		--detach osixia/openldap:1.2.2
+		-p 636:636 \
+		--detach $(IMAGE_NAME)
 
 run_client:
 
